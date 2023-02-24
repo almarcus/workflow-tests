@@ -11,4 +11,4 @@ jobs:
     with:
       environment: prod
     secrets:
-      passed-secret: ${{ secrets.test_secret }}
+      passed-secret: test
