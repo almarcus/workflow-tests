@@ -9,11 +9,11 @@ on:
         required: true
         type: string
     secrets:
-      envPAT:
+      passed-secret:
         required: true
 jobs:
   build:
-    name: ${{ inputs.environment }}-${{ secrets.test-envPAT }}-build
+    name: ${{ inputs.environment }}-${{ secrets.passed-secret }}-build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
