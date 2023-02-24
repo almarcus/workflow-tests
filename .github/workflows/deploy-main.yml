@@ -10,4 +10,4 @@ jobs:
     uses: ./.github/workflows/build-and-deploy.yml
     with:
       environment: prod
-      test-value: ${{ secrets.TEST_SECRET }}
+      test-value: ${{secrets[github.event.inputs.TEST_SECRET]}}
