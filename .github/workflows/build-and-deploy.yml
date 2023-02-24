@@ -8,9 +8,12 @@ on:
       test-value:
         required: true
         type: string
+    secrets:
+      envPAT:
+        required: true
 jobs:
   build:
-    name: ${{ inputs.environment }}-${{ inputs.test-value }}-build
+    name: ${{ inputs.environment }}-${{ secrets.test-envPAT }}-build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
