@@ -9,11 +9,11 @@ on:
         required: false
         type: string
     secrets:
-      passed-secret:
+      passed_secret:
         required: false
 jobs:
   build:
-    name: ${{ inputs.environment }}-${{ secrets.passed-secret }}-build
+    name: ${{ inputs.environment }}-${{ secrets.passed_secret }}-${{ inputs.passed-var }}-build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
