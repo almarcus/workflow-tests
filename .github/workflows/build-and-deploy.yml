@@ -5,9 +5,12 @@ on:
       environment:
         required: true
         type: string
+      test-value:
+        required: true
+        type: string
 jobs:
   build:
-    name: ${{ inputs.environment }}-build
+    name: ${{ inputs.environment }}-${{ inputs.test-value }}-build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
