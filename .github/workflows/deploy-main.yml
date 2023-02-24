@@ -6,8 +6,16 @@ on:
       - main
 
 jobs:
-  develop_build_deploy:
+  main_build_deploy:
     uses: ./.github/workflows/build-and-deploy.yml
     with:
       environment: prod
-      passed-var: ${{ vars.TEST_VARIABLE }}
+      passed-var: ${{ vars.TEST_VAR_PROD }}
+
+  dev_build_deploy:
+    uses: ./.github/workflows/build-and-deploy.yml
+    with:
+      environment: dev
+      passed-var: ${{ vars.TEST_VAR_DEV }}
+
+      
