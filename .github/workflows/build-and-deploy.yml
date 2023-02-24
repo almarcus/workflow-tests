@@ -1,0 +1,13 @@
+name: Treesearch build and deploy
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+jobs:
+  build:
+    name: ${{ inputs.environment }}-build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
