@@ -17,5 +17,7 @@ jobs:
     with:
       environment: dev
       passed-var: ${{ vars.TEST_VAR_DEV }}
+    secrets:
+      passed_secret: test
 
       
