@@ -5,9 +5,12 @@ on:
       environment:
         required: true
         type: string
+      passed-var:
+        required: false
+        type: string
     secrets:
       passed-secret:
-        required: true
+        required: false
 jobs:
   build:
     name: ${{ inputs.environment }}-${{ secrets.passed-secret }}-build
