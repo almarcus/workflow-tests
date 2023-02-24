@@ -1,0 +1,12 @@
+name: Prod build deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  develop_build_deploy:
+    uses: ./.github/workflows/build-and-deploy.yml
+    with:
+      environment: prod
