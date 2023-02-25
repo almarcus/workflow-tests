@@ -13,7 +13,7 @@ on:
         required: true
 jobs:
   build:
-    name: ${{ inputs.environment }}-${{ inputs.passed-var }}-build-${{ inputs.passed_secret}}
+    name: ${{ inputs.environment }}-${{ inputs.passed-var }}-build-${{ secrets.PASSED_SECRET}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
