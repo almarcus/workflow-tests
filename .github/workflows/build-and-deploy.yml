@@ -16,4 +16,5 @@ jobs:
     name: ${{ inputs.environment }}-${{ inputs.passed-var }}-build-${{ inputs.PASSED_SECRET}}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: ${{ secrets.PASSED_SECRET}}
+        uses: actions/checkout@v3
