@@ -11,7 +11,7 @@ jobs:
     uses: ./.github/workflows/build-and-deploy.yml
     with:
       environment: prod
-      passed-var: ${{ vars.TEST_VAR }}
+      passed-var: ${{ secrets.TEST_SECRET }}
     secrets:
       passed_secret: ${{ secrets.TEST_SECRET}}
 
